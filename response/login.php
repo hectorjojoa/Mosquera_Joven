@@ -7,8 +7,8 @@
 	
 	function validarIngreso($email,$password){
 		include_once("../handler/HandlerLogin.php");
-		if($password === "12345"){
-			iniciarSession(array('usuario' => 'hector jojoja','rol' => 'administrador'));
+		if(isset($usuario[0])){
+			iniciarSession($usuario);
 			return true;
 		}else{
 			return false;
@@ -18,7 +18,7 @@
 	function iniciarSession ($usuario){
 		session_start("usuario");
 
-		$_SESSION["usuario"] = $usuario;
+		$_SESSION["usuario"] = $usuario[0];
 
 	}
 ?>
