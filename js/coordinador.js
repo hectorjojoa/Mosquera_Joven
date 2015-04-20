@@ -1,5 +1,7 @@
 $(function(){
 
+	console.log("coordinador");
+
 	//$("#new_persona_campos").hide();
 
 	$("#container").delegate("#mostrar_crear_persona","click",function(){
