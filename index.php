@@ -30,9 +30,7 @@
 			<img  src="images/img_plataforma/logo_alcaldia.png"  id="img_banner">
 		</div>
 		<br/>
-
 		<div align = "center">
-			
 			<br />
 			<?php
 				if(isset($_SESSION["usuario"])){
@@ -51,26 +49,21 @@
 	</header>
 	<div class="row" id="container_principal">
 		<div class="col-xs-3">
-			
-				<img src="images/img_plataforma/log.png" id="img_banner">
-			
+			<img src="images/img_plataforma/log.png" id="img_banner">
 		</div>
-		<aside id="menu" class="col-xs-2">
-			<?php
-				if($_SESSION["usuario"]["rol"] == "administrador"){
-					include_once("view/menu_administrador.php");
-				}else if($_SESSION["usuario"]["rol"] == "estudiante"){
-					include_once("view/menu_estudiante.php");	
-				}
-			?>
-		</aside>
-		
-		<section class="col-xs-7 .col-md-5">
+		<section class="col-xs-12 col-md-5">
 			<article>
 				<div id="container">
 					<?php
 						if(!isset($_SESSION["usuario"])){
 							include_once("view/login.php");
+						}
+						else{
+							if($_SESSION["usuario"]["rol"] == "estudiante"){
+								include_once("view/contenido_estudiante.php");
+							}else if ($_SESSION["usuario"]["rol"] == "coordinador"){
+								include_once("view/contenido_coordinador.php");
+							}
 						}
 					?>
 				</div>
@@ -80,7 +73,7 @@
 	<br/>
 	<footer id="pie" align="center">
 		<div class="container">
-			<p aling=<"center">Contáctenos</p>
+			<p aling=<"center">hector jojoa</p>
 			<p aling=<"center">Teléfono: (57+1) 8424822 Fax:(57+1) 8424822 EXT. 118 Correo electrónico: contactenos@facatativa-cundinamarca.gov.co Dirección: Cra 3 No. 5-68 -Parque Principal (Facatativá-Cundinamarca) </p>
 			<p aling=<"center">Horario de atención: Lunes a Viernes de 8:00 a.m - 12:00 y 2:00 p.m - 5:00 p.m </p>
 			<div class="social">

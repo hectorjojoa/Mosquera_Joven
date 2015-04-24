@@ -1,4 +1,9 @@
 $(function(){
+
+	$('#tab_menu a').click(function (e) {
+		e.preventDefault()
+		$(this).tab('show')
+	})
 	
 	$("#administrar_estudiante").on("click",function(){
 		useAJAX("GET","response/administrador.php",{opcion : "getAllPerson"},
@@ -49,4 +54,18 @@ function useAJAX(metodo,url,data,function_success){
 			data: data,
 			success : function_success
 		})
+}
+
+function createTable(data){
+	table_html = "<table class='table table-striped'>";
+		$.each(data, function(i, item) {
+    		table_html += "<tr>";
+    			$.each(item,function(a,b){
+    				if(!$.isNumeric(a))
+    					table_html += "<td>" + b + "</td>";
+    			});
+    		table_html += "</tr>";
+    	});
+	table_html += "</table>";
+	return table_html;
 }

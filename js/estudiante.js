@@ -1,3 +1,22 @@
 $(function(){
-	console.log("estudiante");
+	useAJAX("GET","response/estudiante.php",
+			{opcion : "getTodosDocumentosPersona"},
+			function(data){
+				$("#cont_estudiante_administrar_informacion").html(createTable(JSON.parse(data)));
+			}
+
+	);
+	useAJAX("GET","response/estudiante.php",
+			{opcion : "getTodosDatosPersona"},
+			function(data){
+				$("#cont_estudiante_administrar_documentos").html(createTable(JSON.parse(data)));
+			}
+
+	);
+	useAJAX("GET","response/estudiante.php",
+			{opcion : "getTodosEventosPersona"},
+			function(data){
+				$("#cont_estudiante_gestion_eventos").html(createTable(JSON.parse(data)));
+			}
+	);
 });
