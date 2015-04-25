@@ -16,9 +16,26 @@
 			return $this->conexion->getTable('semestre', 'id', 2);
 		}
 
+		public function alterEvento($opcion,$id,$nombre,$descripcion,$fecha){
+			switch ($opcion) {
+				case 'new_evento':
+					$opcion = 1;
+					break;
+				case 'edit_evento':
+					$opcion = 2;
+					break;
+				default:
+					echo "Otra opcion: ".$opcion;
+					break;
+			}
+			$datos = array($id,$nombre,$descripcion,$opcion,$fecha);
+			return $this->conexion->runStoredProcedure("SP_AlterEvento",1,$datos);
+		}
+
 		public function cerrarConexion(){
 			$this->conexion->cerrarConexion();
 		}
+
 
 	}
 ?>

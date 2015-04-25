@@ -56,8 +56,8 @@ function useAJAX(metodo,url,data,function_success){
 		})
 }
 
-function createTable(data){
-	table_html = "<table class='table table-striped'>";
+function createTable(data, id_table){
+	table_html = "<table class='table table-striped' id='" + id_table + "'>";
 		$.each(data, function(i, item) {
     		table_html += "<tr>";
     			$.each(item,function(a,b){

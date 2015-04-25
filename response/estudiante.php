@@ -17,4 +17,5 @@
 			break;
 		}
 	}
+	$handler_estudiante->cerrarConexion();
 ?>
