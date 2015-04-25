@@ -71,17 +71,20 @@
 		</section>
 	</div>
 	<br/>
-	<footer id="pie" align="center">
+	<div class="footer">
 		<div class="container">
-			<p aling=<"center">hector jojoa</p>
-			<p aling=<"center">Teléfono: (57+1) 8424822 Fax:(57+1) 8424822 EXT. 118 Correo electrónico: contactenos@facatativa-cundinamarca.gov.co Dirección: Cra 3 No. 5-68 -Parque Principal (Facatativá-Cundinamarca) </p>
-			<p aling=<"center">Horario de atención: Lunes a Viernes de 8:00 a.m - 12:00 y 2:00 p.m - 5:00 p.m </p>
+			<p>Contactenos<br />
+			Teléfono: (57+1) 8299728 Fax:(57+1) 8276366 <br />
+			Correo electrónico: mosquerajoven@alcaldiademosquera.gov.co contactenos@mosquera_cundinamarca.gov.co<br />
+			Dirección: Cll 10 No. 3-01 -Auditorio Municipal piso 1 (Mosquera-Cundinamarca) <br />
+			Horario de atención: Lunes a Jueves de 9:00 a.m - 11:00 am y 2:00 p.m - 4:00 p.m <br />
+								    Miercoles y Viernes de 9:00 a.m - 11:00 am </p><br />
 			<div class="social">
 				<a href="https://www.facebook.com/pages/Mosquera-Joven/259074397570611?fref=ts" target="_blank"><span class="icon2"></span></a>
 				<a href="https://twitter.com/mosquera_joven" target="_blank"><span class="icon3"></span></a>
 				<a href="https://www.youtube.com/channel/UCiaxsOdN6NMxAzd4lLFnl1w" target="_blank"><span class="icon4"></span></a>
 			</div>
 		</div>	 
-	</footer>
+	</div>
 </body>
-</html>
+</html>z

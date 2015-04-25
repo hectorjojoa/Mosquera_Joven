@@ -8,7 +8,7 @@ div#banner{
 	
 	margin:auto;
 	border: 4px solid #FF8000;
-	border-radius:15px 15px;
+	border-radius:0px 0px;
 }
 
 img#img{
@@ -16,7 +16,7 @@ img#img{
 	margin:auto;
 	width:100%;
 	max-width: 300px;
-	border-radius:15px 15px;
+	border-radius:0px 0px;
 }img#img_banner{
 	display:block;
 	margin:auto;
@@ -45,4 +45,77 @@ nav#menu{
 	text-align: center;
 	width:100%;
 
+}
+/*----*/
+.navigation{
+padding:3em 0 0 0;
+}
+.navigation ul li{
+display:inline-block;
+}
+.navigation ul li a{
+color:#535151;
+font-size:1.1em;
+font-weight:600;
+padding:0 1em;
+display:block;
+margin:0 5px;
+text-decoration:none;
+}
+.navigation ul li a:hover{
+color:#f1b63e;
+}
+.footer{
+background:#1a1818;
+padding:3em 0;
+}
+.footer p{
+font-size: 1.1em;
+font-weight: 400;
+color: #fff;
+float: left;
+width: 67%;
+text-align: right;
+margin-top: 8px;
+}
+.footer p a{
+color:#fff;
+}
+.footer p a:hover{
+color:#dea844;
+}
+.social{
+float: right;
+width: 13%;
+}
+.social span{
+background: url(../images/social.png) no-repeat 0px 0px;
+width: 32px;
+height: 35px;
+display:inline-block;
+margin-bottom: 0.7em;
+}
+a span.icon1 {
+background-position: 0px 0px;
+}
+a span.icon2 {
+background-position: -31px -2px;
+}
+a span.icon3 {
+background-position: -66px -2px;
+}
+a span.icon4 {
+background-position: -109px -4px;
+}
+a span.icon1:hover{
+background-position: 0px -43px;
+}
+a span.icon2:hover{
+background-position: -31px -43px;
+}
+a span.icon3:hover{
+background-position: -66px -42px;
+}
+a span.icon4:hover{
+background-position: -109px -41px;
 }
