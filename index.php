@@ -27,7 +27,7 @@
 <body>
 	<header  class="header">
 		<div id="banner" class="col-xs-12">
-			<img  src="images/img_plataforma/logo_alcaldia.png"  id="img_banner">
+			<img  src="images/img_plataforma/logo_alcaldia.png"  id="img_banner">asd
 		</div>
 		<br/>
 		<div align = "center">
