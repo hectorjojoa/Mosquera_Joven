@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 25-04-2015 a las 21:44:20
+-- Tiempo de generación: 28-04-2015 a las 04:25:25
 -- Versión del servidor: 5.6.21
 -- Versión de PHP: 5.6.3
 
@@ -37,6 +37,24 @@ BEGIN
 			nombre = _nombre,
 			descripcion = _descripcion,
 			fecha = _fecha
+		WHERE id = _id;
+		SELECT _id;
+	    ELSE
+		SELECT '0';
+	END CASE;
+END$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_AlterPeriodoAcademico`(IN `_opcion` INT, IN `_id` INT, IN `_nombre` TEXT)
+    NO SQL
+BEGIN
+	CASE _opcion
+	    WHEN '1' THEN 
+		INSERT INTO semestre(id,nombre)
+			VALUES((SELECT MAX(S.id) FROM semestre S) +1,_nombre);
+		SELECT MAX(id) FROM semestre AS _id;
+	    WHEN '2' THEN 
+		UPDATE semestre SET
+			nombre = _nombre
 		WHERE id = _id;
 		SELECT _id;
 	    ELSE
@@ -163,9 +181,8 @@ CREATE TABLE IF NOT EXISTS `evento` (
 INSERT INTO `evento` (`id`, `nombre`, `descripcion`, `fecha`) VALUES
 (1, 'cambio', 'descripcion', '2015-02-03 00:00:00'),
 (2, 'hacer proyecto', 'hacer las actividades pendientes para terminacion del mismo', '2014-11-04 00:03:33'),
-(3, 'ir a camellar', 'levantarce todos ljhosk dias para camellar', '2014-11-05 00:04:13'),
-(4, 'asd', 'asd', '2015-04-25 14:03:32'),
-(5, 'cambio a nombre', 'descripcion 5', '2015-02-03 00:00:00');
+(3, 'prueba creacion', 'descripcion prueba descripcion', '2015-12-12 00:00:00'),
+(4, 'prueba creacion', 'descripcion prueba descripcion', '2015-12-12 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -780,9 +797,12 @@ CREATE TABLE IF NOT EXISTS `semestre` (
 
 INSERT INTO `semestre` (`id`, `nombre`) VALUES
 (1, '01-2014'),
-(2, '02-2014'),
+(2, 'ssf'),
 (3, '01-2015'),
-(4, '02-2015');
+(4, '02-2015'),
+(5, '1234'),
+(6, 'prueba desde WEB'),
+(7, 'prueba desde WEB');
 
 -- --------------------------------------------------------
 

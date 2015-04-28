@@ -32,6 +32,19 @@
 			return $this->conexion->runStoredProcedure("SP_AlterEvento",1,$datos);
 		}
 
+		public function alterPeriodoAcademico($opcion, $valor){
+			switch ($opcion) {
+				case 'new_periodo_academico':
+					//$opcion = 1;
+					break;
+					default:
+					echo "Otra opcion: ".$opcion;
+					break;
+			}
+			$datos = array(1,1,'prueba desde WEB');
+			return $this->conexion->runStoredProcedure("SP_AlterPeriodoAcademico",1,$datos);
+		}
+
 		public function cerrarConexion(){
 			$this->conexion->cerrarConexion();
 		}
