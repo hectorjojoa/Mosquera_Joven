@@ -6,6 +6,10 @@
 -- Tiempo de generación: 28-04-2015 a las 04:25:25
 -- Versión del servidor: 5.6.21
 -- Versión de PHP: 5.6.3
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`dbmosquerajoven` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_bin */;
+
+USE `dbmosquerajoven`;
+
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";

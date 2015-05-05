@@ -8,12 +8,17 @@
 			$this->conexion = new Query();
 		}
 
-		public function getEventos(){
-			return $this->conexion->getTable('evento', 'fecha', 2);
+		public function cerrarConexion(){
+			$this->conexion->cerrarConexion();
 		}
 
-		public function getPeriodosAcademicos(){
-			return $this->conexion->getTable('semestre', 'id', 2);
+		/**
+		*
+		*  Todos los metodos de la logica de eventos de
+		*
+		**/
+		public function getEventos(){
+			return ($this->conexion->getTable('evento', 'fecha', 2));
 		}
 
 		public function alterEvento($opcion,$id,$nombre,$descripcion,$fecha){
@@ -32,6 +37,16 @@
 			return $this->conexion->runStoredProcedure("SP_AlterEvento",1,$datos);
 		}
 
+		/**
+		*
+		*  Todos los metodos de la logica de Periodos academicos
+		*
+		**/
+		
+		public function getPeriodosAcademicos(){
+			return $this->conexion->getTable('semestre', 'id', 2);
+		}
+
 		public function alterPeriodoAcademico($opcion, $valor){
 			switch ($opcion) {
 				case 'new_periodo_academico':
@@ -44,11 +59,6 @@
 			$datos = array(1,1,'prueba desde WEB');
 			return $this->conexion->runStoredProcedure("SP_AlterPeriodoAcademico",1,$datos);
 		}
-
-		public function cerrarConexion(){
-			$this->conexion->cerrarConexion();
-		}
-
 
 	}
 ?>
